@@ -38,6 +38,18 @@ function displayQuestion() {
 
 }
 
+function startTimer() {
+    timeEl.textContent = timeLeft;
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        timeEl.textContent = timeLeft;
+        if (timeLeft === 0) {
+            endQuiz();
+
+        }
+    }, 1000);
+
+}
 
 
 
