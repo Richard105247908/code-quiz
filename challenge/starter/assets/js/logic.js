@@ -15,6 +15,16 @@ let currentQuestionIndex = 0;
 let timeLeft = 60;
 let timerInterval;
 
+startBtn.addEventListener('click', startQuiz);
+
+
+function startQuiz() {
+    startScreenEl.setAttribute('class', 'hide');
+    questionEl.removeAttribute("class");
+    displayQuestion();
+    startTimer();
+}
+
 
 
 
