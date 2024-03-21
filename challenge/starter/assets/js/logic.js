@@ -25,6 +25,18 @@ function startQuiz() {
     startTimer();
 }
 
+function displayQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    questionTitle.textContent = currentQuestion.question;
+    choiceEl.innerHTML = "";
+    currentQuestion.choices.forEach(choice => {
+        const choiceButton = document.createElement('button');
+        choiceButton.textContent = choice;
+        choiceButton.addEventListener('click', handleChoice); // Add event listener here
+        choiceEl.appendChild(choiceButton);
+    });
+
+}
 
 
 
