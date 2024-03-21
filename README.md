@@ -34,7 +34,7 @@ After completing the quiz, you can submit your initials and view the highscores:
 
 ## website screenshot
 - Here is the screenshot of Code-Quiz website.
-![Code-Quiz](./challenge/assets/Code-Quiz.png)
+![Code-Quiz](./assets/images/Code-Quiz.png)
 
 ## Live site link
 Here is the link of Code-Quiz website
