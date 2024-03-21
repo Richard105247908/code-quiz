@@ -51,6 +51,25 @@ function startTimer() {
 
 }
 
+function handleChoice(event) {
+    const selectedChoice = event.target.textContent;
+    const currentQuestion = questions[currentQuestionIndex];
+
+    if (selectedChoice === currentQuestion.answer) {
+        // Display correct feedback (optional)
+        feedbackEl.textContent = "Correct!";
+    } else {
+        // Display incorrect feedback and deduct time
+        feedbackEl.textContent = "Incorrect! -10 seconds";
+        timeLeft -= 10; // Deduct 10 seconds for incorrect answer
+        // Ensure time doesn't go negative
+        timeLeft = Math.max(timeLeft, 0);
+        // Update the time display
+        timeEl.textContent = timeLeft;
+    }
+
+
+
 
 
 
