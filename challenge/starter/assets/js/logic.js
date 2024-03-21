@@ -10,6 +10,11 @@ const submitBtn = document.getElementById("submit");
 const feedbackEl = document.getElementById("feedback");
 const finalScoreEl = document.getElementById('final-score');
 
+// Define global variables for quiz state
+let currentQuestionIndex = 0;
+let timeLeft = 60;
+let timerInterval;
+
 
 
 
