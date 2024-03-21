@@ -68,6 +68,35 @@ function handleChoice(event) {
         timeEl.textContent = timeLeft;
     }
 
+    // Move to the next question
+    currentQuestionIndex++;
+    // Check if all questions have been answered
+    if (currentQuestionIndex < questions.length) {
+        // If not, display the next question
+        displayQuestion();
+    } else {
+        // If all questions have been answered, end the quiz
+        endQuiz();
+    }
+}
+function endQuiz() {
+    clearInterval(timerInterval)
+    endScreenEl.removeAttribute("class");
+    finalScoreEl.textContent = "final score " + timeLeft;
+
+    submitBtn.addEventListener('click', function () {
+        var initials = initialsEl.value.trim();
+        var scoreData = { initials: initials, score: timeLeft };
+        var highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+        highscores.push(scoreData);
+        localStorage.setItem('highscores', JSON.stringify(highscores));
+        // Redirect to the highscores page
+        window.location.href = 'highscores.html';
+
+    });
+
+}
+
 
 
 
