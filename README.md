@@ -38,7 +38,7 @@ After completing the quiz, you can submit your initials and view the highscores:
 
 ## Live site link
 Here is the link of Code-Quiz website
-[Live site link]()
+[Live site link](https://richard105247908.github.io/code-quiz/)
 
 ## Github repo link
 Here is the link of Code-Quiz Github repo
